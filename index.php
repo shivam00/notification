@@ -1,5 +1,9 @@
 <?php
 
+$token=$_POST['token'];
+$title=$_POST['title'];
+$body=$_POST['body'];
+
 $curl = curl_init();
 
 curl_setopt_array($curl, array(
@@ -10,7 +14,7 @@ curl_setopt_array($curl, array(
   CURLOPT_TIMEOUT => 30,
   CURLOPT_HTTP_VERSION => CURL_HTTP_VERSION_1_1,
   CURLOPT_CUSTOMREQUEST => "POST",
-  CURLOPT_POSTFIELDS => "{\n\n\"to\": \"ExponentPushToken[PfnsplIiFW6EQZ7QWt3N23]\",\n\"title\": \"Today’s Broadcast\",\n\"body\": \"Inertia: The Force That Holds The Universe Together\",\n\"sound\": \"default\",\n\n\"badge\": 0\n}",
+  CURLOPT_POSTFIELDS => "{\n\n\"to\": ".$token.",\n\"title\": ".$title.",\n\"body\": ".$body.",\n\"sound\": \"default\",\n\n\"badge\": 0\n}",
   CURLOPT_HTTPHEADER => array(
     "Accept: application/json",
     "Content-Type: application/json"
