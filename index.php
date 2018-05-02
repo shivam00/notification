@@ -1,8 +1,8 @@
 <?php
 
-$token=$_GET['token'];
-$title=$_GET['title'];
-$body=$_GET['body'];
+$token=$_POST['token'];
+$title=$_POST['title'];
+$body=$_POST['body'];
 
 $curl = curl_init();
 
