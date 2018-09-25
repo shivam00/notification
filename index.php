@@ -1,5 +1,4 @@
 <?php
-
 $token=$_POST['token'];
 $title=$_POST['title'];
 $body=$_POST['body'];
